@@ -1,4 +1,4 @@
-# firebasetry
+# rubyClient
 
 ## Project setup
 ```
