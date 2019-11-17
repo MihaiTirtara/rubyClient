@@ -59,17 +59,11 @@
                     v-model='company_data.phoneNumber'>
         </div>
       </form>
-      <div class="btn-toolbar">
         <button
                 class="btn btn-primary"
                 @click.prevent='addCompany'>Submit!
         </button>
 
-        <button
-                class="btn btn-primary"
-                @click.prevent='editCompany'>Edit!
-        </button>
-      </div>
   </div>
 </template>
 
@@ -108,7 +102,7 @@ export default {
       params.append('phoneNumber', this.company_data.phoneNumber);
       // params.append('company',this.company_data)
 
-      axios.post('http://localhost:9292/companies',params)
+      axios.post(' https://ancient-escarpment-92868.herokuapp.com/companies',params)
         .then(response => {
 	         console.log(response)
            EventBus.$emit('Company_Added','company')

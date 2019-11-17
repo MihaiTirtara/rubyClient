@@ -54,7 +54,7 @@ export default{
   },
   methods:{
     getCompanies(){
-      axios.get('http://localhost:9292/companies')
+      axios.get(' https://ancient-escarpment-92868.herokuapp.com/companies')
       .then(response => {
         // handle success
         this.companies = response.data;
@@ -70,9 +70,11 @@ export default{
     deleteCompany(company){
       //For id we have to add 1 because the index in database  starts from 1
       let id = company.id
-      axios.delete('http://localhost:9292/companies/' + id)
+      axios.delete(' https://ancient-escarpment-92868.herokuapp.com/companies/' + id)
       .then(response =>{
         console.log(response);
+      }).catch(error =>{
+      console.log(error)
       });
       this.companies = this.companies.filter(function(item){
         return item !=company
@@ -81,7 +83,7 @@ export default{
     getDetails(company){
       //For id we have to add 1 because the index in database  starts from 1
       let id = company.id
-      axios.get('http://localhost:9292/companies/' + id)
+      axios.get(' https://ancient-escarpment-92868.herokuapp.com/companies/' + id)
         .then(response => {
           // handle success
           this.company_data = response.data;

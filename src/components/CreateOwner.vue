@@ -29,6 +29,7 @@
   </div>
 </template>
 <script >
+import axios from 'axios'
 export default{
   data() {
     return{
@@ -47,7 +48,7 @@ export default{
       params.append('name',name)
       params.append('company_id',id)
       console.log(params);
-      axios.post('http://localhost:9292/owners',params)
+      axios.post(' https://ancient-escarpment-92868.herokuapp.com/owners',params)
         .then(response => {
            console.log(response)
          })
