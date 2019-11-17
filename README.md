@@ -1,5 +1,5 @@
 # rubyClient
-
+Client for consuming a REST API. More informations about the server can be found at this link:https://github.com/MihaiTirtara/companyapi
 ## Project setup
 ```
 npm install
